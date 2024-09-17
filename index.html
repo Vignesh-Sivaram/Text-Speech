@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text to Speech in JavaScript</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js" type="module"></script>
 </head>
 <body>
@@ -13,15 +14,29 @@
     </div>
     <div class="cont">
         <div class="box">
-            <label for="text">Text to speech:</label>
+            <label for="speech" class="box-head">TEXT TO SPEECH</label>
+            <label for="language"><i>Select language:</i></label>
+            <select id="language">
+                <option value="en-IN">English</option>
+                <option value="ta-IN">Tamil</option>
+            </select>
             <textarea id="text" placeholder="Type the text to listen to"></textarea>
-            <button id="speak">Speak Text</button>
+            <button id="speak">Speak <i class="fa fa-volume-up"></i></button>
+            <button id="searchText"><i class="fa fa-search"></i> Search Google</i></button>
         </div>
         <div class="box">
-            <label for="speech">Speech to text:</label>
+            <label for="speech" class="box-head">SPEECH TO TEXT</label>
+            <label for="recognition-language"><i>Select language:</i></label>
+            <select id="recognition-language">
+                <option value="en-US">English</option>
+                <option value="ta-IN">Tamil</option>
+            </select>
             <textarea id="speech" placeholder="Your speech will appear here as text"></textarea>
-            <button id="start">Start Listening</button>
-            <button id="stop">Stop Listening</button>
+            <div class="button-row">
+                <button id="start">Start <i class="fa fa-microphone"></i></button>
+                <button id="stop">Stop <i class="fa fa-microphone-slash"></i></button>
+            </div>
+            <button id="searchSpeech"><i class="fa fa-search"></i> Search Google</button>
         </div>
     </div>
 </body>
